@@ -139,3 +139,13 @@ function animationHover(element, animation){
         });
 }
 /////////////////////////////////////////////////////////////////////////////////////////
+// <link rel="stylesheet" href="./Media_files/animate.css">
+$(document).ready(function() {
+	
+	var elems = $('.instagram-image');
+	
+    $(elems).each(function() {
+		animationHover(this, 'bounce'); //add the bounce mechanism to each Instagram image
+    });
+	
+});
