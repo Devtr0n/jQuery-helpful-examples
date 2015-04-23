@@ -112,3 +112,30 @@ function clearDisabledValues() {
         }
     });        
 }
+
+////////////////////////////// ANIMATION //////////////////////////////////////////////
+// <link rel="stylesheet" href="./Portfolio_files/animate.css">
+$(document).ready(function() {
+	
+	var elems = $('[id^=img]');
+	
+    $(elems).each(function() {
+		animationHover(this, 'bounce'); //add the bounce mechanism to each image
+    });
+	
+});
+
+function animationHover(element, animation){
+    element = $(element);
+    element.hover(
+        function() {
+            element.addClass('animated ' + animation);        
+        },
+        function(){
+            //wait for animation to finish before removing classes
+            window.setTimeout( function(){
+                element.removeClass('animated ' + animation);
+            }, 2000);         
+        });
+}
+/////////////////////////////////////////////////////////////////////////////////////////
