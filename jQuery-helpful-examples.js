@@ -148,4 +148,9 @@ $(document).ready(function() {
 		animationHover(this, 'bounce'); //add the bounce mechanism to each Instagram image
     });
 	
+	var movieElems = $('embed[src^="http://www.youtube.com/v/"]');
+    $(movieElems).each(function() {
+		animationHover(this, 'bounce'); //add the bounce mechanism to each Instagram image
+    });	
 });
+/////////////////////////////////////
