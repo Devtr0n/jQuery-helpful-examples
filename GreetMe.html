@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Example</title>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+
+<script>
+function greetMe(){
+    var name = document.getElementById('txtName').value;
+    var nr   = document.getElementById('txtNmr').value;   
+
+     if (nr > 1 && nr < 20){
+         for (var counter = 0; counter < nr; counter = counter + 1) {      
+          $('#greetings').append("Hello, " + name + "<br />");
+        }
+      } else {
+        $('#errors').append("Please Enter A Number Between 1 and 20");
+      }
+
+}
+</script>    
+  
+</head>
+
+  <body>
+    <p>Type in your name</p>
+      <input type="text" id="txtName">
+    <p>Enter a numner 1-20.</p>
+      <input type="text" id="txtNmr">
+      <input type="button" value="Greet Me!" onclick="greetMe()">
+    <hr>
+
+    <div id="greetings" />
+    <div id="errors" />
+
+  </body>
+
+</html>
