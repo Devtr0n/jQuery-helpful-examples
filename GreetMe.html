@@ -13,7 +13,7 @@ function greetMe(){
     var nr   = document.getElementById('txtNmr').value;   
 
      if (nr > 1 && nr < 20){
-         for (var counter = 0; counter < nr; counter = counter + 1) {      
+         for (var counter = 0; counter < nr; counter++) {      
           $('#greetings').append("Hello, " + name + "<br />");
         }
       } else {
